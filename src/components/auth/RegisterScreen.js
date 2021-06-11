@@ -25,6 +25,12 @@ export const RegisterScreen = () => {
     const handleRegister = ( e ) => {
         e.preventDefault();
 
+        if(rName.length < 6) {
+            return Swal.fire('Error', 'El nombre debe tener al menos 6 caracteres','error');
+        }
+        if(rPassword1.length < 6) {
+            return Swal.fire('Error', 'La contraseña debe tener al menos 6 caracteres','error');
+        }
         if ( rPassword1 !== rPassword2 ) {
             return Swal.fire('Error', 'Las contraseñas deben de ser iguales','error');
         }

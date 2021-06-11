@@ -4,6 +4,9 @@ import './aegis.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearActiveRecord, recordStartAddNew, recordStartUpdate } from '../../actions/records';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
+
+import icono_atras  from "../../assets/icono-atras-png-5.png";
 
 const initialState = {
     pNombre: 'Ellon',
@@ -134,6 +137,9 @@ export const GestionarScreen = () => {
       
       const handleCleanForm = () => setformValues({ ...initialState });
       
+      const handleCleanActive = () => {
+          dispatch( clearActiveRecord() );
+      }
 
       const handleSubmit = (e) => {
 
@@ -237,8 +243,7 @@ export const GestionarScreen = () => {
             dispatch( recordStartUpdate( formValues ) );
             dispatch( clearActiveRecord() );
         } else {
-            dispatch( recordStartAddNew( formValues ) );
-            // dispatch( clearActiveRecord() );
+            dispatch( recordStartAddNew( formValues ) );            
         }
 
         setformValues({ ...initialState });
@@ -280,7 +285,7 @@ export const GestionarScreen = () => {
                 <Navbar />
                 
                 <form id="create-customer">                
-                
+                <Link to="/" className="prev-page" onClick={ handleCleanActive }><img src={ icono_atras } alt="icono-atras"/></Link>
                 <section className="inner-container1">
                     <div className="inner-div">
                         <h2>Postulante</h2> 
@@ -494,6 +499,7 @@ export const GestionarScreen = () => {
                     </div>
                 </section>
                 <section className="inner-container2">
+                    <div className="left">
                     <h2>Datos Comunes</h2>
                     <div className="inner-section datos-comunes">
                             <div>
@@ -559,8 +565,6 @@ export const GestionarScreen = () => {
                                        value={ poblacionfinal }
                                 />         
                             </div>
-                    </div>
-                    <div className="datos-comunes2">
                             <div>
                                 <label htmlFor="" className="dc-label">Provincia Final</label>
                                 <input className={`input1 form-control ${ !provinciafinalValid && 'is-invalid' } `} 
@@ -579,9 +583,9 @@ export const GestionarScreen = () => {
                                        value={ ocupantes }
                                 />
                             </div> 
+                    </div> 
                     </div>
-                </section>
-                <section className="inner-container imprimir-crear">
+                    <div className="right">
                     <h2>Observaciones</h2>
                     <div className="observaciones">
                         <textarea className={`input1 form-control ${ !observacionesValid && 'is-invalid' } `} 
@@ -593,10 +597,8 @@ export const GestionarScreen = () => {
                             <input className="btn btn-danger" type="button" id="borrar" value="Borrar" onClick={ handleCleanForm }/>                            
                         </div>
                     </div>
-                    <div>
-    
-                    </div>
-                </section>
+                   </div>                   
+                </section>               
             </form>
             </div>
         );

@@ -52,6 +52,7 @@ input[type='radio'] {
 #create-customer {
     width: 95%;
     margin: 15px auto;
+    max-width: 1440px;
 }
 .centered {
     margin: auto;
@@ -71,9 +72,17 @@ input[type='radio'] {
 .mb-10 {
     margin-bottom: 10px;
 }
-.inner-container1 {
+.inner-container1,
+.inner-container2  {
     display: flex;
     justify-content: space-between;           
+}
+.inner-container2 {
+    margin-top: 30px;
+}
+.inner-container2 .left,
+.inner-container2 .right {
+    width: 49%;
 }
 .inner-div{
     width: 49%;
@@ -101,8 +110,10 @@ label {
     border-radius: .25rem;
 }
 #create-customer h2 {
-    margin: 15px 0;
+    margin: 10px 0;
     color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .grid {
@@ -134,12 +145,17 @@ label {
     justify-content: space-between;    
 }
 .observaciones {
-    display: flex;    
+    display: flex;
+    margin-top: 48px;    
 }
 .observaciones textarea {
     width: 100%;
-    height: 200px;
+    height: 192px;
     
+}
+.prev-page img {
+    width: 3%;
+    position: absolute;
 }
 .botones {
     width: 100%;
