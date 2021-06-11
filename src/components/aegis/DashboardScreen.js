@@ -28,9 +28,9 @@ export const DashboardScreen = () => {
                 
         let url = document.location.href;
         
-        url === 'http://localhost:3000/' &&
-        dispatch( clearActiveRecord() );
-
+        if(url === 'http://localhost:3000/' || url === 'https://aegis-app-aa.herokuapp.com/') {
+            dispatch( clearActiveRecord() );
+        }
     });
     
     const handleDelete = () => {
