@@ -1,0 +1,103 @@
+.outter {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    position: relative;
+    padding-top: 15px;
+}
+.intro-text,
+.registro-div p {
+    text-align: center;
+}
+.user-icon,
+.registrate {
+    display: flex;
+    justify-content: center;
+}
+.user-icon img {
+    width: 10%;
+}
+.registro-div p {
+    color: #fff;    
+}
+.registrate button {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+.form-control {
+    background-color: #EAE8E8;
+    color: #0062cc !important;
+    text-align: center;
+}
+.form-control::placeholder {
+    color: #0062cc !important;
+}
+.login-form-1{    
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);    
+    background: #fff;
+}
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+.login-form-2{
+    border-radius: 5px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;    
+    background: #fff;
+}
+.icono-atras img {
+    width: 6%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.login-form-2 h3{
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 5% 10%;
+}
+.btnSubmit
+{
+    width: 100%;    
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    color: #fff;
+    background-color: #0062cc;
+}
+.login-form-2 .btnSubmit{
+    background-color: #0062cc;
+    color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #0062cc;
+    font-weight: 600;
+    text-decoration: none;
+}

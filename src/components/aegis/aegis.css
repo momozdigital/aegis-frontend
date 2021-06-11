@@ -1,0 +1,169 @@
+.aee_buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+.aee_buttons .btn {
+    margin: 0 10px;
+    padding: 0;
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.row {   
+    justify-content: center;
+    align-items: center;    
+}
+.pointer {
+    background: #fff;
+    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    height: 26px;
+}
+.col-md-1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;   
+}
+.col-md-3 p,
+.col-md-2 p {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+input[type='radio'],
+input[type='radio'] {
+   height: auto;  
+}
+.active {
+    border-color: #ff80a2;
+    box-shadow: 0 0 0 0.2rem rgb(148 255 0 / 56%);
+    transform: scale(1.01);
+}
+.disabled {
+    display: none;
+}
+/* Aqui empiezan los estilos de la pagina Crear */
+.crear-screen {
+    width: 100vw;
+    overflow-x: hidden;
+}
+#create-customer {
+    width: 95%;
+    margin: 15px auto;
+}
+.centered {
+    margin: auto;
+    width: auto;
+}
+.text-centered {
+    text-align: center;
+}
+.ml-10 {
+    margin-left: 10px;
+    width: auto;
+}
+.mr-10 {
+    margin-right: 10px;
+    width: auto;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.inner-container1 {
+    display: flex;
+    justify-content: space-between;           
+}
+.inner-div{
+    width: 49%;
+}
+input, label {
+    display:block;
+}
+input {
+    background: #f2f2f2;
+    outline: none;
+    border: none;
+    height: 35px;
+}
+label {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.input-label {
+    display: grid;    
+}
+.inner-div table {     
+    background: #fff;
+    padding: 10px;
+    border-radius: .25rem;
+}
+#create-customer h2 {
+    margin: 15px 0;
+    color: #fff;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;    
+}
+.input1 {
+    background: #fff;
+    padding: 0 5px;
+}
+.input2 {
+    width: 95%;    
+}
+.input3 {
+    width: 85%;    
+}
+.dc-label {
+    color: #fff;
+}
+.datos-comunes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;    
+}
+.datos-comunes2 {
+    margin-top: 10px;
+    width: 28%;
+    display: flex;
+    justify-content: space-between;    
+}
+.observaciones {
+    display: flex;    
+}
+.observaciones textarea {
+    width: 100%;
+    height: 200px;
+    
+}
+.botones {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 10px;
+}
+.botones input {
+    width: 33%;    
+}
+
+.botones input:hover {
+    background: rgba(255,255,255, 0.5);
+    cursor: pointer;
+}
+.is-invalid {
+    padding-right: 0 !important;
+}
+.form-control {
+    text-align: left;
+}
+#guardar, #borrar {
+    margin: 0 5px;
+    padding: 0;
+    font-weight: bold;
+}
