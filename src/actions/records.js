@@ -129,4 +129,4 @@ const recordLoaded = (records) => ({
     payload: records
 })
 
-// export const eventLogout =() => ({ type: types.eventLogout });
+export const recordLogout =() => ({ type: types.recordLogout });

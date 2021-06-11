@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { AppRouter } from './router/AppRouter'
 
-export const CalendarApp = () => {
+export const AegisApp = () => {
     return (
         <Provider store={ store }>
             <AppRouter />

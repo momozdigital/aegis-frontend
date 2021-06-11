@@ -1,12 +1,7 @@
 
-export const types = {
-
-    uiOpenModal: '[ui] Open modal',
-    uiCloseModal: '[ui] Close modal',
-
+export const types = {     
     
-    eventSetActive: '[event] Set Active',
-    eventLogout: '[event] Logout event',
+    recordLogout: '[record] Logout record',
 
     recordSetActive: '[record] Set Active',
 
@@ -16,14 +11,7 @@ export const types = {
     recordLoaded: '[record] Records loaded',
     clearActiveRecord: '[record] Clear active record',
     recordUpdated: '[record] Record updated',
-    recordDeleted: '[record] Record deleted',
-    
-    evetStartAddNew: '[event] Start add new',
-    eventAddNew: '[event] Add new',
-    eventClearActiveEvent: '[event] Clear active event',
-    eventUpdated: '[event] Event updated',
-    eventDeleted: '[event] Event deleted',
-    eventLoaded: '[event] Events loaded',
+    recordDeleted: '[record] Record deleted',  
 
 
     authCheckingFinish: '[auth] Finish checking login state',

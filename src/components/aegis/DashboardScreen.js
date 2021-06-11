@@ -14,15 +14,24 @@ let recordID = '';
 export const DashboardScreen = () => {
     
     const { records, activeRecord } = useSelector( state => state.aegis );
-    // console.log(records.length)
+   
     const dispatch = useDispatch();
 
     const notice = new Notice();
-
     
+
     if(activeRecord !== null) {
         recordID = activeRecord.id
     }
+
+    window.addEventListener('popstate', (event) => {
+                
+        let url = document.location.href;
+        
+        url === 'http://localhost:3000/' &&
+        dispatch( clearActiveRecord() );
+
+    });
     
     const handleDelete = () => {
         
@@ -89,13 +98,13 @@ export const DashboardScreen = () => {
                         {
                             activeRecord == null 
                             ?
-                            <Link to='/crearPostulante'>
+                            <Link to='/gestionar'>
                                 <button className={`btn btn-light }`}>
                                 Agregar 
                                 </button>
                             </Link>
                             :
-                            <Link to={`/crearPostulante/:${ recordID }`}>
+                            <Link to={`/gestionar/:${ recordID }`}>
                                 <button className={`btn btn-light }`}>
                                 Editar 
                                 </button>

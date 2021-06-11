@@ -38,7 +38,7 @@ const initialState = {
     observaciones: 'none',
 }  
 
-export const CrearPostulanteScreen = () => {    
+export const GestionarScreen = () => {    
     
     const [formValues, setformValues] = useState(initialState);
     const { activeRecord } = useSelector(state => state.aegis);

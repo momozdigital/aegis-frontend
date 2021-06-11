@@ -57,7 +57,7 @@ export const aegisReducer = ( state = initialState, action ) => {
                 records: [ ...action.payload ]
             }
 
-        case types.eventLogout:
+        case types.recordLogout:
             return {
                 ...initialState
             }

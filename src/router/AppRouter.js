@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Redirect,
-    useHistory,   
+    Redirect       
   } from 'react-router-dom';
   
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,18 +12,14 @@ import { startChecking } from '../actions/auth';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { RegisterScreen } from '../components/auth/RegisterScreen';
-import { CrearPostulanteScreen } from '../components/aegis/CrearPostulanteScreen';
+import { GestionarScreen } from '../components/aegis/GestionarScreen';
 import { DashboardScreen } from '../components/aegis/DashboardScreen';
-import { CalendarScreen } from '../components/calendar/CalendarScreen';
 
 
 export const AppRouter = () => {
-
-    let history = useHistory();
+    
     const dispatch = useDispatch();
-    const { checking, uid } = useSelector( state => state.auth);
-
-    console.log(history);
+    const { checking, uid } = useSelector( state => state.auth);    
 
     useEffect(() => {
         
@@ -62,14 +57,14 @@ export const AppRouter = () => {
                     />
                     <PrivateRoute 
                         exact 
-                        path="/crearPostulante" 
-                        component={ CrearPostulanteScreen } 
+                        path="/gestionar" 
+                        component={ GestionarScreen } 
                         isAuthenticated={ !!uid }
                     />
                     <PrivateRoute 
                         exact 
-                        path="/crearPostulante/:id" 
-                        component={ CrearPostulanteScreen } 
+                        path="/gestionar/:id" 
+                        component={ GestionarScreen } 
                         isAuthenticated={ !!uid }
                     />
 

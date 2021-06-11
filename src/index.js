@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CalendarApp } from './CalendarApp';
+import { AegisApp } from './AegisApp';
+
 
 import './styles.css';
 
 ReactDOM.render(
-    <CalendarApp />,
+    <AegisApp />,
   document.getElementById('root')
 );
