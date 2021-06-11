@@ -6,7 +6,9 @@
     height: 100%;
     width: 100%;
 }
-
+.login-container .form-control {
+    text-align: center;
+}
 .middle {
     display: table-cell;
     vertical-align: middle;
