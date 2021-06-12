@@ -63,26 +63,26 @@ export const DashboardScreen = () => {
             fontSize: 14
         });
 
-        axios.post('/create-pdf', activeRecord)
-        .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
+        // axios.post('/create-pdf', activeRecord)
+        // .then(() => axios.get('fetch-pdf', { responseType: 'blob' }))
+        // .then((res) => {
+        
+        //   const pdfBlob = new Blob([res.data], { type: 'application/pdf' });    
+        //   saveAs(pdfBlob, 'newPdf.pdf');
+
+        //   notice.hideLoading();
+          
+        // })
+        axios.post('/create-pdf2', activeRecord)
+        .then(() => axios.get('fetch-pdf2', { responseType: 'blob' }))
         .then((res) => {
         
           const pdfBlob = new Blob([res.data], { type: 'application/pdf' });    
-          saveAs(pdfBlob, 'newPdf.pdf');
+          saveAs(pdfBlob, 'contrato-prestacion.pdf');
 
           notice.hideLoading();
           
-        })
-      //   axios.post('/create-pdf2', this.state)
-      //   .then(() => axios.get('fetch-pdf2', { responseType: 'blob' }))
-      //   .then((res) => {
-        
-      //     const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
-  
-      //     saveAs(pdfBlob, 'newPdf2.pdf');
-      //     this.setState({ loading : false });
-      //     // console.log(this.state.loading);
-      //   })  
+        })  
       
     }
 
